@@ -8,6 +8,10 @@ USE_CAMERA_STUB := true
 # Keep this as a fallback
 TARGET_PREBUILT_KERNEL := device/lenovo/B8000/kernel
 
+#TARGET_KERNEL_SOURCE := kernel/lenovo/b8000
+#TARGET_KERNEL_CONFIG := blade10_row_wifi_defconfig
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-linux-androideabi-4.6
+
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := LENOVO
