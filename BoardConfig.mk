@@ -6,10 +6,11 @@ USE_CAMERA_STUB := true
 # Try to build the kernel
 #TARGET_KERNEL_CONFIG := cyanogenmod_mydevice_defconfig
 # Keep this as a fallback
-TARGET_PREBUILT_KERNEL := device/lenovo/B8000/kernel
+#TARGET_PREBUILT_KERNEL := device/lenovo/B8000/kernel
 
-#TARGET_KERNEL_SOURCE := kernel/lenovo/b8000
-#TARGET_KERNEL_CONFIG := blade10_row_wifi_defconfig
+TARGET_KERNEL_SOURCE := kernel/lenovo/kernel
+TARGET_KERNEL_CONFIG := cyanogenmod_blade10_row_wifi_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-linux-androideabi-4.6
 
 TARGET_ARCH := arm
@@ -32,7 +33,5 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-TARGET_PREBUILT_KERNEL := device/lenovo/B8000/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
