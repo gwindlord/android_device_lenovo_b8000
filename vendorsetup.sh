@@ -1,1 +1,1 @@
-add_lunch_combo device_b8000-eng
+add_lunch_combo B8000-eng
