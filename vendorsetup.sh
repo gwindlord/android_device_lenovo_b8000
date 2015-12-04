@@ -1,1 +1,2 @@
-add_lunch_combo B8000-eng
+add_lunch_combo cm_B8000-eng
+add_lunch_combo cm_B8000-userdebug

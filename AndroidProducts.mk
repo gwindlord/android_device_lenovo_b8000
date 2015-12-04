@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/B8000.mk
+	$(LOCAL_DIR)/device.mk

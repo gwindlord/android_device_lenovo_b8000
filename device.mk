@@ -1,9 +1,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+# suppose this one shold be for WiFi version
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/lenovo/b8000/b8000-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/B8000/B8000-vendor.mk)
+
+# call dalvik heap config
+$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lenovo/B8000/overlay
 
@@ -14,10 +20,10 @@ else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel
 
-$(call inherit-product, build/target/product/full.mk)
+#$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -59,13 +65,3 @@ ADDITIONAL_BUILD_PROPERTIES := \
     $(ADDITIONAL_BUILD_PROPERTIES) \
     $(PRODUCT_BUILD_PROPERTIES)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := B8000
-PRODUCT_NAME := B8000
-PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := Lenovo B8000-F
-PRODUCT_MANUFACTURER := LENOVO
-
-# Bootanimation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
