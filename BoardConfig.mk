@@ -18,6 +18,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # fix this up by examining /proc/mtd on a running device
+# /proc/mtd is empty, so taking approx values from the stock ROW ROM
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 870000000
@@ -31,7 +32,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_blade10_row_wifi_defconfig
 # Keep this as a fallback
 #TARGET_PREBUILT_KERNEL := device/lenovo/B8000/kernel
 
-TARGET_KERNEL_SOURCE := kernel/lenovo/kernel
+TARGET_KERNEL_SOURCE := kernel/lenovo/B8000
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-linux-androideabi-4.6
